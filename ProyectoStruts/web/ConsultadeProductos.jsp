@@ -27,10 +27,10 @@
         
         <table>
             <tr>
-                <td><strong>Id</strong></td>
-                <td><strong>Nombre</strong></td>
-                <td><strong>Carrera</strong></td>
-                <td><strong>Semestre</strong></td>
+                <td><strong>Codigo De Barras</strong></td>
+                <td><strong>Producto</strong></td>
+                <td><strong>Descripcion</strong></td>
+                <td><strong>Cantidad</strong></td>
                 <td><strong>Precio</strong></td>
             </tr>
             <%

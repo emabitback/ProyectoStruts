@@ -9,6 +9,7 @@ package dao;
 // import desarrollo.form.UsuarioForm;
 
 import devel.form.ConsultaForm;
+import devel.form.ProductoForm;
 import java.sql.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,6 +19,34 @@ import javax.jms.ConnectionFactory;
 import utilerias.ConectionFactory;
 
 public class ProductosDAO {
+    
+    
+    public void insertaProducto(ProductoForm form) throws Exception{
+        Connection con = null;
+        PreparedStatement ps = null;
+        
+        String sql = "insert into productos Values(?,?,?,?,?)";
+        
+        try{
+            con = ConectionFactory.getConnection();
+            ps = con.prepareStatement(sql);
+            
+            ps.setString(1, form.getCodigo_barras());
+            ps.setString(2, form.getNombre_producto());
+            ps.setString(3, form.getDescripcion());
+            ps.setInt(4, form.getCantidad());
+            ps.setDouble(5, form.getPrecio());
+            
+            int rows = ps.executeUpdate();
+        }catch (Exception e){
+            System.out.println("Error en insertar usuario:"+e.getMessage());
+        }finally{
+            if(ps!=null && !ps.isClosed()){
+                ps.close();
+            }
+            ConectionFactory.closeConnection(con);
+        }
+    }
     
     public void consultarProductos() throws Exception{
          Connection con = null;
@@ -52,8 +81,8 @@ public class ProductosDAO {
                  }
                  //return false;
     }
-          
-            
+    
+    
      public boolean verificaLogin(String usuario, String password) throws Exception{
          Connection con = null;
          PreparedStatement ps = null;

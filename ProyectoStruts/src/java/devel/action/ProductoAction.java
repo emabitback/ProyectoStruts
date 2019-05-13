@@ -21,15 +21,14 @@ public class ProductoAction extends DispatchAction {
     /* forward name="success" path="" */
     private static final String SUCCESS = "success";
     
-     public ActionForward doRegistro(ActionMapping mapping, ActionForm form,
+     public ActionForward doRegistra(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws ServletException{
         ProductoForm pf= (ProductoForm) form;
         
         try{
-            ProductoDAO pDAO = new ProductoDAO();
-            
-           
+            ProductosDAO pDAO = new ProductosDAO();
+            pDAO.insertaProducto(pf);
         }catch(Exception e){
             
         }
