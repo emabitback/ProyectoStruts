@@ -24,8 +24,6 @@
                 width: 700px;
             }
         </style>
-        
-        
         <h1>Listado de usuarios</h1>
         
         <table>

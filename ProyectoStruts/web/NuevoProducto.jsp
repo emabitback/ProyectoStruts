@@ -17,10 +17,8 @@
         <title>JSP Page</title>
     </head>
     <body>
-       
-        
          <jsp:include page="header.jsp"/> 
-        
+     
         
         <div class="container">
             <html:form method="post" action="/productoAction.do?dispatch=doRegistra">
