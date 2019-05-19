@@ -13,12 +13,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="nuevoproducto.css">
+        <link rel="stylesheet" href="estilos-ema.css">
         <title>JSP Page</title>
     </head>
     <body>
        
-        
+         <jsp:include page="header.jsp"/> 
         
         
         <div class="container">
@@ -30,11 +30,7 @@
                &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
                Precio : <html:text property="precio" styleClass="input input-precio"/> <br> <br> <br>
 
-
               <html:submit   property="envio" styleClass="button">Agregar</html:submit>
-              
-                
-            
            </html:form>
              
         </div>   

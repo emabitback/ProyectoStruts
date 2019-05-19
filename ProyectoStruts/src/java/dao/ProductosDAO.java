@@ -1,13 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 package dao;
 // import desarrollo.form.BajasForm;
 // import desarrollo.form.UsuarioForm;
 
+import devel.form.AltaPersonalForm;
 import devel.form.ConsultaForm;
 import devel.form.ProductoForm;
 import java.sql.*;
@@ -40,6 +36,35 @@ public class ProductosDAO {
             int rows = ps.executeUpdate();
         }catch (Exception e){
             System.out.println("Error en insertar usuario:"+e.getMessage());
+        }finally{
+            if(ps!=null && !ps.isClosed()){
+                ps.close();
+            }
+            ConectionFactory.closeConnection(con);
+        }
+    }
+    
+    public void insertaPersonal(AltaPersonalForm form) throws Exception{
+        Connection con = null;
+        PreparedStatement ps = null;
+        
+        String sql = "insert into personal(rfc,nombre,turno,correo,pass) Values(?,?,?,?,?)";
+        
+        try{
+            con = ConectionFactory.getConnection();
+            ps = con.prepareStatement(sql);
+           
+            
+            ps.setString(1, form.getRfc());
+            ps.setString(2, form.getNombre());
+            ps.setString(3, form.getTurno());
+            ps.setString(4, form.getCorreo());
+            ps.setString(5, form.getPass());
+           // ps.setString(5, form.getFoto());
+            
+            int rows = ps.executeUpdate();
+        }catch (Exception e){
+            System.out.println("Error en Dar de Alta el Personal: "+e.getMessage());
         }finally{
             if(ps!=null && !ps.isClosed()){
                 ps.close();

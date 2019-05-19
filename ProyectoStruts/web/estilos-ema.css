@@ -1,0 +1,129 @@
+// RESET HTML
+body{
+    width: 85%;
+    background-color: blue;
+}
+
+
+.container{
+    width: 500px;
+    height: 400px;
+    margin: auto;
+   // background-color: brown;
+    padding-left: 100px;
+    padding-top: 50px;
+     font-size: 1.2rem;
+}
+
+.input{
+   background-color: transparent;
+    border:0;
+    border-bottom: 2px solid black;
+    outline: none;
+}
+.input:focus{
+border: 0;
+ background-color: transparent;
+ border-top: 2px solid transparent;
+border-bottom: 2px solid chartreuse;
+outline: none;
+}
+
+.input-cb{
+   width: 50px;
+}
+
+.input-des{
+    height: 50px;
+    width: 300px;
+}
+
+.input-cant{
+    width: 30px;
+}
+
+
+
+.input-precio{
+    width: 40px;
+}
+
+.button{
+    margin-left: 200px;
+    height: 30px;
+    width: 100px;
+    background-color: #2ecc71;
+   // border:2px solid black;
+    border-radius: 7px;
+    color:white;
+    font-size: 1em;
+}
+
+.button:hover{
+    margin-left: 200px;
+    height: 30px;
+    width: 100px;
+    background-color: #27ae60;
+    //border:2px solid black;
+    font-weight: bold;
+}
+/*
+******************************************************************
+**                                                              **
+**                                                              **
+**      INICIA ESTILOS PARA ALTAS DE PERSONAL                   **
+**                                                              **
+**                                                              **
+******************************************************************
+*/
+
+.personal{
+    width: 610px;
+    height: 400px;
+    margin: auto;
+   //background-color: #e67e22;
+   //color:white;
+    padding-left: 100px;
+    padding-top: 50px;
+    font-size: 1.2rem;
+}
+
+.input-rfc{
+   width: 110px; 
+}
+
+.input-rfc:focus{
+    border-bottom: 2px solid white;
+    border-top: 3px solid #e67e22;
+}
+.f:focus{
+    border-bottom: 2px solid white;
+    border-top: 3px solid #e67e22;
+}
+
+.input-nombre{
+    width: 210px;
+}
+.input-contrasena{
+    width: 220px;
+}
+
+.button-personal{
+    margin-left: 200px;
+    height: 30px;
+    width: 200px;
+    background-color: #2ecc71;
+   // border:2px solid black;
+    border-radius: 7px;
+    color:white;
+    font-size: 1em;
+}
+
+.button-personal:hover{
+    margin-left: 200px;
+    height: 30px;
+    width: 200px;
+    background-color: #27ae60;
+    //border:2px solid black;
+    font-weight: bold;
+}

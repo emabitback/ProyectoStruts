@@ -7,6 +7,8 @@
 
 <struts-config>
     <form-beans>
+        <form-bean name="AltaPersonalForm" type="devel.form.AltaPersonalForm"/>
+        <form-bean name="AltaPersonalForm" type="devel.form.AltaPersonalForm"/>
         <form-bean name="ProductoForm" type="devel.form.ProductoForm"/>
         <form-bean name="ConsultaForm" type="devel.form.ConsultaForm"/>
     
@@ -21,6 +23,7 @@
     </global-forwards>
 
     <action-mappings>
+        <action input="/" name="AltaPersonalForm" path="/altaPersonalAction" scope="session" type="devel.action.AltaPersonalAction" parameter="dispatch"/>
         <action input="/" name="ProductoForm" path="/productoAction" scope="session" type="devel.action.ProductoAction" parameter="dispatch"/>
         <action input="/" name="ConsultaForm" path="/consultaAction" scope="session" type="devel.action.ConsultaAction"/>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>

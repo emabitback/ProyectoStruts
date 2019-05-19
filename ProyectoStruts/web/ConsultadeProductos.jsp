@@ -16,6 +16,8 @@
         <title>Consulta General</title>
     </head>
     <body>
+        
+         <jsp:include page="header.jsp"/> 
         <style>
             table{
                 width: 700px;
